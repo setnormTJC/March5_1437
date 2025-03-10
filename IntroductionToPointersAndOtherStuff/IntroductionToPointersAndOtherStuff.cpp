@@ -2,6 +2,7 @@
 //
 
 #include <iostream>
+#include<memory>
 #include<string> 
 
 void demoSimpleIntroToPointers()
@@ -81,8 +82,24 @@ public:
 };
 
 
+void demoSmartPointer()
+{
+    while (true)
+    {
+        //int* ptrToAnInt = new int; //the NEW operator/keyword "dynamically" 
+        //this is a "stupid" /raw/naked pointer
+        //delete ptrToAnInt;
+
+        //this is a type of "smart" pointer (Java has something called "garbage collection" which is similar 
+        std::unique_ptr<int> ptrToANOTHERInt = std::make_unique<int>();
+
+    }
+}
+
 int main()
 {
+
+
     //Making a pointer to a CLASS object: 
     Person me; 
     me.age = 36; 
