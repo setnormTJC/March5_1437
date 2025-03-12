@@ -14,7 +14,7 @@ void demoSimpleIntroToPointers()
     int* ptrToA = &a;
 
     std::cout << a << "\n";
-    std::cout << *ptrToA << "\n";
+    std::cout << *ptrToA << "\n"; //dereferencing a pointer (get the contents of that memory address!) 
 
     int nums[5] = { 11, 22, 33, 44, 55 }; //nums is a POINTER (in disguise) 
 
@@ -67,8 +67,8 @@ void demoSAFEDynamicAllocation()
 {
     while (true)
     {
-        int* ptrToDynamicallyAllocatedInteger = new int;
-        delete ptrToDynamicallyAllocatedInteger;
+        int* ptrToDynamicallyAllocatedInteger = new int; //naked new
+        delete ptrToDynamicallyAllocatedInteger; //this prevents a memory leak
 
     }
 
