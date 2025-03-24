@@ -12,12 +12,13 @@ class Rectangle : public Shape
 {
 	int length, width; 
 
+public: 
 	int calculateArea() override; //this overrides the parent class's definition of calculateArea
 };
 
 class Triangle : public Shape
 {
 	int base, height; 
-
+public:
 	int calculateArea() override; 
 };

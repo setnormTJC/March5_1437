@@ -7,7 +7,16 @@
 
 int main()
 {
+
+
 	//Shape someShape;  //doesn't work! cannot instantiate an object of an "abstract class"
 
 	//Why would I ever want to make an abstract class then? 
+
+	//..good question
+
+	Rectangle r; // this IS allowed - because Rectangle overrides its parent's pure virtual function (calcArea)
+	
+
+
 }
